@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f7fa;
@@ -138,7 +142,7 @@ button:hover {
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #52292e;
     color: white;
     text-align: center;
     padding: 25px 10px;
@@ -155,4 +159,64 @@ button:hover {
     text-decoration: underline;
 }
 
-.thank-you
+/* Thank You Message */
+.thank-you {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0a9396;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Optional: Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .box,
+    textarea {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    .navbar,
+    button {
+        background-color: #333;
+    }
+
+    .footer {
+        background-color: #1f1f1f;
+        border-top-color: #0a9396;
+    }
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product Layout */
+.product-container {
+    display: flex;
+    gap: 20px; /* space between products */
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    justify-content: center; /* center align */
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
